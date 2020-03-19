@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'montserrat',sans-serif;
+}
+body{
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+}
+.wrapper{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.statistic{
+    width: 100%;
+}
+.title{
+    color: white;
+    margin: 30px auto;
+    text-align: center;
+    width: 100%;
+}
+.total_case_box{
+    background-color: #fff000;
+    box-shadow: 2px 2px 8px rgba(220,220,220,.2);
+    margin: 10px 15px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+.total_case_box p{
+    font-size: 3rem;
+}
+.wrapper .box_wrapper{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box_wrapper .box{
+    display: inline-block;
+    background-color: #fff000;
+    box-shadow: 2px 2px 8px rgba(30,30,30,.2);
+    margin: 10px 15px;
+    width:250px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 13px;
+    text-transform: uppercase;
+}
+.box_wrapper .box p{
+    font-size: 2rem;
+}
+
+/*Styiling the table*/
+table{
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-spacing: 0;
+    overflow-x: scroll;
+}
+tr:first-child{
+    background-color: #37474f;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+th{
+    padding: 12px 10px;
+    border: none;
+    border-spacing: 0;
+    background-color: #fff000;
+    color: black;
+}
+th td{
+    padding:0 10px; 
+}
+tr:nth-child(odd){
+    background-color: #fafafa;
+    
+    
+}
+tr:nth-child(even){
+    background-color: #424242;
+    color: #fafafa;
+}
+tr td{
+    padding: 10px 0;
+    
+    
+}
+.etitle {
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    width: 100%;
+}

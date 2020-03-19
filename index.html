@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Live Statistics of CVOID-19">
+    <meta name="author" content="Adarsh">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+    <title>COVID-19 TRACKER</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">COVID-19 Statistics</h1>
+        <div class="statistic">
+
+            <div class="total_case_box">
+                <h2>Total Cases</h2>
+                <p id="total_cases"></p>
+            </div>
+            <div class="box_wrapper">
+                <div class="box">
+                    <h2>Total Death</h2>
+                    <p id="total_death"> </p>
+                </div>
+
+                <div class="box">
+                    <h2>Total Recovery</h2>
+                    <p id="total_recovered"> </p>
+                </div>
+
+                <div class="box">
+                    <h2>New case</h2>
+                    <p id="new_case"> </p>
+                </div>
+
+                <div class="box">
+                    <h2>New Death</h2>
+                    <p id="new_death"> </p>
+                </div>
+            </div>
+            <div class="etitle">Country-Wise Statistics</div>
+            <div class="table"  style="overflow-x:auto;" id="#double-scroll">
+            <table id="countries_stat">
+                <tr>
+                    <th>Country</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                    <th>Total recovered</th>
+                </tr>
+            </table>
+            </div>
+        </div>
+        <div class="credits" style="color: aqua; width: 100%; text-align: center; font-size: 18px; margin: 20px auto;">&lt;/&gt; by Adarsh Mishra</div>
+
+    </div>
+
+</body>
+
+<script src="js/main.js"></script>
+<script>
+        $.ajax({
+            type: "GET",
+            url: "{% url 'vtn:get_more_tables' %}",
+            data: {'drprogram': $('#id_dr_program').val(),
+                    'daterange' : $('#datefilter').val()}
+        })
+        .done(function(response) {
+            $('#_drprograms').html(response);
+        });
+</script>
+</html>
